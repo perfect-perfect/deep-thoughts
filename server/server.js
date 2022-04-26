@@ -23,6 +23,7 @@ const startServer = async () => {
 	await server.start();
 
 	// integrate our Apollo server with the Express application as middlewate
+	// this will create a special '/graphql' endpoint for the 'Express.js' server
 	server.applyMiddleware({ app });
 
 	// log where we can goto test our GQL API
